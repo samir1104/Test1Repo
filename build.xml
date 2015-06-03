@@ -1,0 +1,20 @@
+<project name="Sample usage of Salesforce Ant tasks" default="test" basedir="../DemoProject/src" xmlns:sf="antlib:com.salesforce">
+
+    <property file="build.properties"/>
+    <property environment="env"/>
+
+    <taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce">
+        <classpath>
+            <pathelement location="../ant-salesforce.jar" />
+        </classpath>
+    </taskdef>
+
+    <!-- Shows deploying code & running tests for code in directory -->
+    <target name="deployCode">
+      <!-- Upload the contents of the "pages" directory, containing new VF pages-->
+      <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" deployRoot="pages" rollbackOnError="true">
+        
+      </sf:deploy>
+    </target>
+
+</project>
