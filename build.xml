@@ -12,7 +12,7 @@
     <!-- Shows deploying code & running tests for code in directory -->
     <target name="deployCode">
       <!-- Upload the contents of the "pages" directory, containing new VF pages-->
-      <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" deployRoot="pages" rollbackOnError="true">
+      <sf:deploy username="a.sameer11lightsandbox@gmail.com" password="Password01DdX7OPH8ep2Dy08hIWzKPkSY" serverurl="login.salesforce.com" maxPoll="20" deployRoot="/" rollbackOnError="true">
         
       </sf:deploy>
     </target>
